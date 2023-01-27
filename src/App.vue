@@ -1,6 +1,8 @@
 <template>
-  <NavBar title="hola que tal"/>
+  <NavBar title="hola que tal"
+  subtitle="ES EL SUBTITLE"/>
  <!--<router-view/>--> 
+
 
 </template>
 

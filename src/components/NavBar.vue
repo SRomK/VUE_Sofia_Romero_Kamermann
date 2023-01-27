@@ -5,8 +5,14 @@
             <h4>{{title}}</h4>
         </div>
 
+
+
         <a href="http://www.google.es" target="_blank">Google</a>
         <a href="http://www.vuejs.org" target="_blank">Vue</a>
+    
+        <div class="subtitle">
+            <h6>{{subtitle}}</h6>
+        </div>
     </nav>
 </template>
 
@@ -19,8 +25,22 @@ export default defineComponent ({
         title: {
             type: String,
             required: true
-        }
-    }
+        },
+        subtitle: {
+            type: String,
+            required: true
+        },
+        links: {
+            type: Array,
+            default() {
+                return [
+                {label: 'Google', link: 'http://www.google.es'},
+                {label: 'vue', link: 'http://www.vuejs.org'}
+
+                ];
+            },
+        },
+    },
 });
 </script>
 
@@ -37,4 +57,11 @@ export default defineComponent ({
         background-color: #2c3e50;
         color:white;
     }
+
+    .subtitle {
+        color:aquamarine;
+        width: 50px;
+    }
+
+
 </style>
